@@ -1,109 +1,124 @@
-@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
-
-
-body {
-    font-family: 'Poppins', sans-serif;
-    background: #fafafa;
+body{
+    font-family:'Helvetica Neue';
 }
 
-p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.1em;
-    font-weight: 300;
-    line-height: 1.7em;
-    color: #999;
-}
-
-a, a:hover, a:focus {
-    color: inherit;
-    text-decoration: none;
-    transition: all 0.3s;
-}
-
-#sidebar {
-    width: 250px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    z-index: 999;
-    background: #7386D5;
-    color: #fff;
-    transition: all 0.3s;
-}
-
-.content{
-    margin-left: 200px;
-}
-
-#sidebar .sidebar-header {
-    padding: 20px;
-    background: #6d7fcc;
-}
-
-#sidebar ul.components {
-    padding: 20px 0;
-    border-bottom: 1px solid #47748b;
-}
-
-#sidebar ul p {
-    color: #fff;
-    padding: 10px;
-}
-
-#sidebar ul li a {
-    padding: 10px;
-    font-size: 1.1em;
-    display: block;
-}
-#sidebar ul li a:hover {
-    color: #7386D5;
-    background: #fff;
-}
-
-#sidebar ul li.active > a, a[aria-expanded="true"] {
-    color: #fff;
-    background: #6d7fcc;
-}
-ul ul a {
-    font-size: 0.9em !important;
-    padding-left: 30px !important;
-    background: #6d7fcc;
-}
-
-.wrapper {
-    display: flex;
-    width: 100%;
-    align-items: stretch;
-}
-
-.wrapper {
-    display: flex;
-    align-items: stretch;
-}
-
-#sidebar {
-    min-width: 250px;
-    max-width: 250px;
-}
-
-#sidebar.active {
-    margin-left: -250px;
-}
-#sidebar {
-    min-width: 250px;
-    max-width: 250px;
-    min-height: 100vh;
-}
-
-a[data-toggle="collapse"] {
+.wrapper{
     position: relative;
+    background-color: #D1D1D1
+    
 }
 
-.dropdown-toggle::after {
-    display: block;
+#wrapper__sidenav{
+    position: fixed;
+    background-color:#181D22;
+    width: 500px;
+    padding: 0;
+    height: 100vh;
+    left: 0;
+    top: 0;
+}
+
+.wrapper__sidenav__img h2{    
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+
+#executive {
+    font-family:'Lucida Calligraphy';
+    color: red;
+    margin-top:-10px;
+    text-transform: uppercase;
+}
+
+ul a{
+    text-decoration: none;
+    color: white;  
+    width: 100%; 
+     
+}
+
+ul{    
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;   
+    
+}
+
+.wrapper__sidenav__footer {
+    color: white;
+    text-align: center;
+    /* margin: 0 auto; */
+}
+
+.wrapper__sidenav__links{
+    display: flex;
+    align-items: center;
+    margin-top: 50%;
+    /* width: 100%; */
+    
+}
+
+.wrapper__sidenav__links__link{
+    display: inline-block;
+    width: 100%;    
+    height: 50px;
+    padding-left: 40%;
+     
+    
+}
+
+.wrapper__sidenav__links__link {
+    margin: auto;
+}
+
+.wrapper__sidenav__links__link:hover{
+    color: black;
+    background-color: #D1D1D1;
+}
+
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+
+.wrapper__sidenav__footer{
     position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
+    width: 100%;
+    bottom: 30px;
+    margin: 0 auto;
+    color: white;
+   
+}
+
+.links, .links:hover, .links:active, .links:visited{
+    text-decoration: none;
+}
+.links:hover{
+    color: black;
+}
+
+#margin__left{
+    
+    width: 100%;
+    margin-left: 300px;   
+    z-index: 2; 
+}
+
+.user__card{
+    background-color: #262626;
+    color: white;
+    height: 50px;
+    display: table;
+    padding: 10px;
+}
+
+.user__info{
+    display: table-cell;
+    vertical-align: middle;
+
 }
