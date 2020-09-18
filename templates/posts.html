@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Posts</title>
+{% endblock %}
+
+{% block body %}
+    <h2>All the posts</h2>
+    <form action='/posts' method='POST'>
+        <label for='title'>Title</label>
+        <input type='text' name='title' placeholder='Enter new post title'><br>
+        <label for='content'>Content</label>
+        <input type='text' name='content' placeholder='Enter your blog content'>
+        <br>
+        <input type='submit' value='Post'>
+    </form>
+    <div>
+        {% for post in posts %}
+            <h4>{{post.title}}</h4>
+            <p>{{post.content}}</p>
+            <a href="/posts/{{post.id}}">Update Post</a>
+            <a href="/posts/delete/{{post.id}}">Delete Post</a>
+            {% if post.author %}
+                <p>{{post.author}}</p>
+            {% else %}
+                <p>No Author</p>
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endblock %}
