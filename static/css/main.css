@@ -77,6 +77,7 @@ ul{
 .wrapper__sidenav__links__link:hover{
     color: black;
     background-color: #D1D1D1;
+    cursor:pointer;
 }
 
 a{
@@ -107,6 +108,8 @@ a:hover{
     width: 100%;
     margin-left: 300px;   
     z-index: 2; 
+    margin-top: 100px;
+    
 }
 
 .user__card{
@@ -115,6 +118,11 @@ a:hover{
     height: 50px;
     display: table;
     padding: 10px;
+}
+
+.user__card:hover{
+    background-color:#525050;
+    cursor: pointer;
 }
 
 .user__info{
