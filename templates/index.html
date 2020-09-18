@@ -6,4 +6,18 @@
 
 {% block body %}
 <h2>Hello world</h2>
-    {% endblock %}
+
+    {% for user in users %}
+    <div>
+        <h4>{{user.first_name}}{{user.last_name}}</h4>
+        <p>{{user.address}}</p>
+        <a href="/posts/{{user.id}}">{{user.preferred_store}}</a>
+        <a href="/posts/delete/{{user.id}}">Delete Post</a>
+        <p>{{user.card_status}}</p>
+        <p>{{user.email}}</p>
+        <p>{{user.date_joined}}</p>
+
+    </div>
+        
+    {% endfor %}
+{% endblock %}

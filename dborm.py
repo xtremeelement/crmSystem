@@ -10,7 +10,7 @@ db = mysql.connector.connect(
 cursor = db.cursor(dictionary=True)
 
 def getAll():
-    cursor.execute("SELECT * FROM blog_post ORDER BY created_at DESC;")
+    cursor.execute("SELECT * FROM members;")
     result = cursor.fetchall()
     return result
     

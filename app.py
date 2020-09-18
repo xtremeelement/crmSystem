@@ -20,7 +20,8 @@ class BlogPost(db.Model):
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    users = dborm.getAll()
+    return render_template('index.html', users=users)
 
 @app.route('/posts', methods=['GET', 'POST'])
 def posts():
